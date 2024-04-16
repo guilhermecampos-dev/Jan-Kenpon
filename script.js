@@ -7,20 +7,26 @@ const AIScore = document.querySelector('#AI-score')
 let humanScoreNumber = 0
 let AIScoreNumber = 0
 
-
+const GAME_OPTIONS = {
+    ROCK: 'Rock',
+    PAPER: 'Paper',
+    SCISSORS: 'Scissors',
+    LIZARD: 'Lizard',
+    SPOCK: 'Spock'
+}
 
 const playHuman = (HumanChoice) => {
 
     playTheGame(HumanChoice, playMachine())
     HChoice.innerHTML = HumanChoice
 
-    
-  
+
+
 }
 
 
 const playMachine = () => {
-    const choices = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
+    const choices = [GAME_OPTIONS.ROCK, GAME_OPTIONS.PAPER, GAME_OPTIONS.SCISSORS, GAME_OPTIONS.LIZARD, GAME_OPTIONS.SPOCK]
     const randomNumber = Math.floor(Math.random() * 5)
 
     return choices[randomNumber]
@@ -29,19 +35,19 @@ const playMachine = () => {
 const playTheGame = (human, AI) => {
 
     console.log('Human:' + human + 'AI:' + AI)
-    
+
 
     if (human === AI) {
         result.innerHTML = 'a Tie'
-    } else if ((human === 'Paper' && AI === 'Rock') || (human === 'Paper' && AI === 'Spock') || 
-    (human === 'Rock' && AI === 'Lizard') || (human === 'Rock' && AI === 'Scissors') ||
-    (human === 'Lizard' && AI === 'Paper') || (human === 'Lizard' && AI === 'Spock') ||
-    (human === 'Spock' && AI === 'Rock') || (human === 'Spock' && AI === 'Scissors') ||
-    (human === 'Scissors' && AI === 'Paper') || (human === 'Scissors' && AI === 'Lizard') ) {
+    } else if ((human === GAME_OPTIONS.PAPER && AI === GAME_OPTIONS.ROCK) || (human === GAME_OPTIONS.PAPER && AI === GAME_OPTIONS.SPOCK) ||
+        (human === GAME_OPTIONS.ROCK && AI === GAME_OPTIONS.LIZARD) || (human === GAME_OPTIONS.ROCK && AI === GAME_OPTIONS.SCISSORS) ||
+        (human === GAME_OPTIONS.LIZARD && AI === GAME_OPTIONS.PAPER) || (human === GAME_OPTIONS.LIZARD && AI === GAME_OPTIONS.SPOCK) ||
+        (human === GAME_OPTIONS.SPOCK && AI === GAME_OPTIONS.ROCK) || (human === GAME_OPTIONS.SPOCK && AI === GAME_OPTIONS.SCISSORS) ||
+        (human === GAME_OPTIONS.SCISSORS && AI === GAME_OPTIONS.PAPER) || (human === GAME_OPTIONS.SCISSORS && AI === GAME_OPTIONS.LIZARD)) {
         humanScoreNumber++
         myScore.innerHTML = humanScoreNumber
         result.innerHTML = 'You Win'
-    }else {
+    } else {
         AIScoreNumber++
         AIScore.innerHTML = AIScoreNumber
         result.innerHTML = 'You Lose'
