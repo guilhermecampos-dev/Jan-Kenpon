@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jan kenpon</title>
+</head>
+
+<body>
+    <img src="./Assets/2601791-big-bang-theory-hd-pc-wallpaper-free-download.jpg" alt="Tori">
+    <div class="title">
+        <h1>じゃんけんぽん</h1>
+        <h2>Jan Kenpon</h2>
+    </div>
+    <div class="container-master">
+        <div class="human-choice">
+            <h1 class="choice">Your Choice</h1>
+            <p class="human" onchange="humanchoice()"></p>
+        </div>
+        <div class="container">
+            <button id="rock" onclick="playHuman('Rock')">&#x1F44A</button>
+            <button id="paper" onclick="playHuman('Paper')">&#x1F590</button>
+            <button id="scissors" onclick="playHuman('Scissors')">&#x270C</button>
+            <button id="lizard" onclick="playHuman('Lizard')">&#x1F98E</button>
+            <button id="spock" onclick="playHuman('Spock')">&#x1F596</button>
+            <p class="your-score">Your Score <span id="human-score">0</span></p>
+            <p class="IA-score">AI score: <span id="AI-score">0</span></p>
+            <p class="result"></p>
+        </div>
+        <div class="AI-choice">
+            <h1 class="choice">AI Choice</h1>
+            <p class="AI"></p>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
