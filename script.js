@@ -20,8 +20,6 @@ const playHuman = (HumanChoice) => {
     playTheGame(HumanChoice, playMachine())
     HChoice.innerHTML = HumanChoice
 
-
-
 }
 
 
