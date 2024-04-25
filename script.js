@@ -38,7 +38,7 @@ const playMachine = () => {
 
 const playTheGame = (human, AI) => {
 
-    /*console.log('Human:' + human + 'AI:' + AI)*/
+    console.log('Human:' + human + 'AI:' + AI)
 
 
     if (human === AI) {
