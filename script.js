@@ -3,9 +3,13 @@ const HChoice = document.querySelector('.human')
 const AIChoice = document.querySelector('.AI')
 const myScore = document.querySelector('#human-score')
 const AIScore = document.querySelector('#AI-score')
+const reStart = document.querySelector('.reset')
+
 
 let humanScoreNumber = 0
 let AIScoreNumber = 0
+const maxGame = 5
+let tentativas = 0
 
 const GAME_OPTIONS = {
     ROCK: 'Rock',
@@ -19,9 +23,11 @@ const playHuman = (HumanChoice) => {
 
     playTheGame(HumanChoice, playMachine())
     HChoice.innerHTML = HumanChoice
-
+    if(tentativas === maxGame){
+        alert("Fim de jogo");
+    }
+    tentativas++
 }
-
 
 const playMachine = () => {
     const choices = [GAME_OPTIONS.ROCK, GAME_OPTIONS.PAPER, GAME_OPTIONS.SCISSORS, GAME_OPTIONS.LIZARD, GAME_OPTIONS.SPOCK]
@@ -32,7 +38,7 @@ const playMachine = () => {
 
 const playTheGame = (human, AI) => {
 
-    console.log('Human:' + human + 'AI:' + AI)
+    /*console.log('Human:' + human + 'AI:' + AI)*/
 
 
     if (human === AI) {
@@ -51,5 +57,6 @@ const playTheGame = (human, AI) => {
         result.innerHTML = 'You Lose'
     }
     AIChoice.innerHTML = AI
+
 }
 

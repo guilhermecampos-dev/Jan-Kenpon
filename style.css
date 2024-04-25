@@ -126,8 +126,3 @@ p {
     opacity: .8;
 }
 
-.reset:hover{
-    background-color: rgb(0, 26, 20);
-    opacity: 1;
-    transition: 0.02s ease-in-out;
-}
