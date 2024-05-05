@@ -23,7 +23,7 @@ const playHuman = (HumanChoice) => {
     if(tentativas === maxGame){
         alert("Fim de jogo");
         return false
-        }
+    }
     playTheGame(HumanChoice, playMachine())
     HChoice.innerHTML = HumanChoice
     tentativas++
