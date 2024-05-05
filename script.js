@@ -20,13 +20,12 @@ const GAME_OPTIONS = {
 }
 
 const playHuman = (HumanChoice) => {
-
-    playTheGame(HumanChoice, playMachine())
-    HChoice.innerHTML = HumanChoice
     if(tentativas === maxGame){
         alert("Fim de jogo");
         return false
-        }
+    }
+    playTheGame(HumanChoice, playMachine())
+    HChoice.innerHTML = HumanChoice
     tentativas++
     
 }
