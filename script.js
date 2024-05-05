@@ -8,7 +8,7 @@ const reStart = document.querySelector('.reset')
 
 let humanScoreNumber = 0
 let AIScoreNumber = 0
-const maxGame = 4
+const maxGame = 6
 let tentativas = 0
 
 const GAME_OPTIONS = {
@@ -20,13 +20,12 @@ const GAME_OPTIONS = {
 }
 
 const playHuman = (HumanChoice) => {
-
-    playTheGame(HumanChoice, playMachine())
-    HChoice.innerHTML = HumanChoice
     if(tentativas === maxGame){
         alert("Fim de jogo");
         return false
         }
+    playTheGame(HumanChoice, playMachine())
+    HChoice.innerHTML = HumanChoice
     tentativas++
     
 }
