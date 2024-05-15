@@ -2,127 +2,183 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
-
-
-img {
+ img{
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: -1;
     top: 0;
-}
+ }
 
-.title{
+ .title{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
-}
+ }
 
-.container-master{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0;
-}
-
-.human{
-    background-color: rgb(187, 218, 248);
-    width: 150px;
-    height: 150px;
-    border-radius: 30px;
+ .container-master{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column-reverse;
 
-}
+ }
 
-.AI{
-    background-color: rgb(187, 218, 248);
-    width: 150px;
-    height: 150px;
+.container{
+    background-color: rgb(5, 49, 115);
+    height: 300px;
+    width: 450px;
     border-radius: 30px;
+    border: none;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.choice{
-    font-size: 25px;
-    text-align: center;
-}
-
-
-.container {
-    background-color:rgb(187, 218, 248);
-    width: 300px;
-    height: 450px;
-    display: block;
-    margin: auto;
-    opacity: .9;
     text-align: center;
     color: aliceblue;
+    gap: 30px;
+    opacity: .9;    
+
+}
+
+ .small-box{
+    display: flex;
+    gap: 50px;
+    margin-top: 5px;
+ }
+
+.choice{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.human-choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ .human{
+    background-color:rgb(5, 49, 115);
     border-radius: 30px;
+    height: 100px;
+    width: 115px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-h1 {
-    color: rgb(187, 218, 248);
-    font-size: 50px;
+.round-game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ .result{
+    background-color: rgb(5, 49, 115);
+    border-radius: 30px;
+    height: 100px;
+    width: 115px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ }
+
+ .AI-choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ .AI{
+    background-color: rgb(5, 49, 115);
+    border-radius: 30px;
+    height: 100px;
+    width: 115px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ }
+
+ .results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px 0 10px;
+ }
+
+h1{
+    font-size: 45px;
+    color: rgb(187,218,248);
     font-weight: bold;
-    margin: 10px;
 }
-
 h2{
-    color: rgb(187, 218, 248);
-    font-size: 50px;
+    font-size: 35px;
+    color: rgb(187,218,248);
     font-weight: bold;
 }
 
-button {
-    font-size: 40px;
-    padding: 10px;
-    border-radius: 20px;
-    cursor: pointer;
-    margin: 20px 10px 10px;
-    transition: opacity 0.1s ease-in-out;
-}
-
-button:hover{
-    background-color: rgb(184, 215, 243);
-}
-
-p {
+h3{
     font-size: 35px;
+    font-weight: bold;
+    color: rgb(187, 218, 248);
+}
+
+p{
+    font-size: 30px;
     padding: 10px;
     margin: 10px;
     font-weight: bold;
-    color: rgb(83, 83, 83);
+    color: rgb(250, 250, 250);
 }
+button{
+    font-size: 50px;
+    padding: 10px;
+    border-radius: 30px;
+    border: 2.5px solid;
+    cursor: pointer;
+    transition: opacity 0.1s ease-in-out;
+    background-color: rgb(5, 49, 115);
+}
+ button:hover{
+    background-color: rgb(184, 215, 243);
+ }
 
-.your-score span{
+ .your-score span{
     color: rgb(0, 109, 117);
     font-weight: bold;
-}
+ }
 
-.IA-score span{
+ .IA-score span{
     color: rgb(247, 100, 32);
     font-weight: bold;
-}
+ }
 
 .reset{
     display: block;
-    margin: 15px auto;
-    border-radius: 30px;
+    margin: 10px auto;
+    border-radius: 40px;
     width: 300px;
     background-color: rgb(0, 26, 67);
-    color: rgb(113, 212, 187);
+    color: rgb(113, 212, 187); 
     cursor: pointer;
     font-size: 25px;
     font-weight: bold;
-    border: 2.5px solid rgb(50, 29, 50 );
+    border: 2.5px solid rgb(50, 29, 50);
     opacity: .8;
 }
 
+.reset:hover{
+    background-color: rgb(2, 49, 125);
+}

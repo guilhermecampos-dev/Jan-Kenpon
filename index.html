@@ -15,27 +15,37 @@
         <h2>Jan Kenpon</h2>
     </div>
     <div class="container-master">
-        <div class="human-choice">
-            <h1 class="choice">Your Choice</h1>
-            <p class="human" onchange="humanchoice()"></p>
+        <div class="small-box">
+            <div class="human-choice">
+                <h3 class="choice">Your Choice</h3>
+                <p class="human" onchange="humanchoice()"></p>
+            </div>
+            <div class="round-game">
+                <h3 class="choice">Round Result</h3>
+                <p class="result"></p>
+            </div>
+            <div class="AI-choice">
+                <h3 class="choice">PC Choice</h3>
+                <p class="AI"></p>
+            </div>
         </div>
         <div class="container">
+            <div class="button-play">
             <button id="rock" onclick="playHuman('Rock')">&#x1F44A</button>
             <button id="paper" onclick="playHuman('Paper')">&#x1F590</button>
             <button id="scissors" onclick="playHuman('Scissors')">&#x270C</button>
             <button id="lizard" onclick="playHuman('Lizard')">&#x1F98E</button>
             <button id="spock" onclick="playHuman('Spock')">&#x1F596</button>
-            <p class="your-score">Your Score <span id="human-score">0</span></p>
-            <p class="IA-score">PC score: <span id="AI-score">0</span></p>
-            <p class="result"></p>
         </div>
-        <div class="AI-choice">
-            <h1 class="choice">PC Choice</h1>
-            <p class="AI"></p>
+            <div class="results">
+                <p class="your-score">Your Score <span id="human-score">0</span></p>
+                <p class="IA-score">PC score: <span id="AI-score">0</span></p>
+            </div>
         </div>
+
     </div>
     <button class="reset" onclick="window.location.reload()">Reset</button>
-
+    
 
 
 </body>

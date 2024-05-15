@@ -8,7 +8,7 @@ const reStart = document.querySelector('.reset')
 
 let humanScoreNumber = 0
 let AIScoreNumber = 0
-const maxGame = 6
+const maxGame = 5
 let tentativas = 0
 
 const GAME_OPTIONS = {
@@ -21,7 +21,7 @@ const GAME_OPTIONS = {
 
 const playHuman = (HumanChoice) => {
     if(tentativas === maxGame){
-        alert("Fim de jogo");
+        alert("End Game");
         return false
     }
     playTheGame(HumanChoice, playMachine())
@@ -43,7 +43,7 @@ const playTheGame = (human, AI) => {
 
 
     if (human === AI) {
-        result.innerHTML = 'a Tie'
+        result.innerHTML = 'Tie'
     } else if ((human === GAME_OPTIONS.PAPER && AI === GAME_OPTIONS.ROCK) || (human === GAME_OPTIONS.PAPER && AI === GAME_OPTIONS.SPOCK) ||
         (human === GAME_OPTIONS.ROCK && AI === GAME_OPTIONS.LIZARD) || (human === GAME_OPTIONS.ROCK && AI === GAME_OPTIONS.SCISSORS) ||
         (human === GAME_OPTIONS.LIZARD && AI === GAME_OPTIONS.PAPER) || (human === GAME_OPTIONS.LIZARD && AI === GAME_OPTIONS.SPOCK) ||
@@ -51,11 +51,11 @@ const playTheGame = (human, AI) => {
         (human === GAME_OPTIONS.SCISSORS && AI === GAME_OPTIONS.PAPER) || (human === GAME_OPTIONS.SCISSORS && AI === GAME_OPTIONS.LIZARD)) {
         humanScoreNumber++
         myScore.innerHTML = humanScoreNumber
-        result.innerHTML = 'You Win'
+        result.innerHTML = 'Win'
     } else {
         AIScoreNumber++
         AIScore.innerHTML = AIScoreNumber
-        result.innerHTML = 'You Lose'
+        result.innerHTML = 'Lose'
     }
     AIChoice.innerHTML = AI
 
